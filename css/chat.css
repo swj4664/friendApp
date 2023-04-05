@@ -43,7 +43,33 @@
   }
 
   /* + : 다음 요소 선택 */
-  .swiper-slide-active + div + div {
+  .swiper-slide-active+div+div {
+    background-color: black !important;
+    transition: all 0.5s;
+    cursor: pointer;
+    color: rgb(230, 230, 230);
+  }
+
+  .swiper-slide-active+div+div::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid #00FF66;
+    transition: all 0.5s;
+  }
+
+  .swiper-slide::after {
+    content: '';
+    transition: all 0.5s;
+  }
+
+  .swiper-slide-active+div+div {
     background-color: black !important;
     transition: all 0.5s;
     cursor: pointer;
@@ -54,18 +80,18 @@
     opacity: 0.6;
   }
 
-  .swiper-slide-active + div + div + div + div {
+  .swiper-slide-active+div+div+div+div {
     opacity: 0.6;
   }
 
-  .swiper-slide-active + div + div {
+  .swiper-slide-active+div+div {
     background-color: black !important;
     transition: all 0.5s;
     cursor: pointer;
     color: rgb(230, 230, 230);
   }
 
-  .swiper-slide-active + div + div .img {
+  .swiper-slide-active+div+div .img {
     background-color: aliceblue;
     opacity: 1;
   }
