@@ -1,0 +1,47 @@
+@media (max-width: 768px) {
+    .titleWrap {
+        display: flex;
+        flex: 1 1 0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        scale: .7;
+    }
+
+    .adSkip {
+        position: absolute;
+        bottom: 6%;
+        right: 10%;
+        border: 1px solid aliceblue;
+        padding: 15px 30px;
+        font-size: 30px;
+        color: aliceblue;
+        cursor: pointer;
+        animation: blink .5s ease alternate infinite;
+        transition: all .3s;
+    }
+}
+
+@media (max-width: 568px) {
+    .titleWrap {
+        display: flex;
+        flex: 1 1 0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        scale: .5;
+    }
+
+    .adSkip {
+        position: absolute;
+        bottom: 4%;
+        right: 10%;
+        border: 1px solid aliceblue;
+        padding: 15px 30px;
+        font-size: 30px;
+        color: aliceblue;
+        cursor: pointer;
+        animation: blink .5s ease alternate infinite;
+        transition: all .3s;
+    }
+}

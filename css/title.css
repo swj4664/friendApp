@@ -1,0 +1,55 @@
+.titleAD {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.titleWrap {
+    display: flex;
+    flex: 1 1 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.titleWrap .titleContent {
+    display: flex;
+    flex: 1 1 0;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+
+.titleWrap .titleContent .textOne {
+    padding: 10px;
+}
+
+.adSkip {
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+    border: 1px solid aliceblue;
+    padding: 15px 30px;
+    font-size: 30px;
+    color: aliceblue;
+    cursor: pointer;
+    animation: blink .5s ease alternate infinite;
+    transition: all .3s;
+}
+
+.adSkip:hover {
+    border: 1px solid #00FF66;
+    color: #00FF66;
+}
+
+@keyframes blink {
+    0% {
+        opacity: .5;
+    }
+}

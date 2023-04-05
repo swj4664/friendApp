@@ -667,7 +667,6 @@ body::-webkit-scrollbar {
     width: 700px;
     height: 700px;
     border-radius: 50%;
-    /* border: 2px solid rgb(196, 196, 196); */
     background-image: url(../img/earth.png);
     background-size: cover;
     box-shadow: -20px -50px -20px -20px #000;
@@ -700,6 +699,7 @@ body::-webkit-scrollbar {
     transform: translate(-50%, -70%);
     color: rgb(196, 196, 196);
     text-align: center;
+    z-index: 999;
 }
 
 .contentHeight {
