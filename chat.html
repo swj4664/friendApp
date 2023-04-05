@@ -1,219 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css"
+    />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
-
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/chat.css" />
     <title>Document</title>
-</head>
+  </head>
 
-<style>
-    body {
-        background-color: black;
-    }
-
-    .swiper-container {
-        position: absolute;
-        top: 50%;
-        left: 30%;
-        transform: translate(-50%, -50%);
-        width: 480px;
-        height: 700px;
-        color: rgb(109, 109, 109);
-    }
-
-    .swiper-container::before {
-        content: '';
-        position: absolute;
-        top: 0%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 480px;
-        height: 250px;
-        background: linear-gradient(to bottom, black 50%, transparent);
-        z-index: 9;
-    }
-
-    .swiper-container::after {
-        content: '';
-        position: absolute;
-        bottom: 0%;
-        left: 50%;
-        transform: translate(-50%, 50%);
-        width: 480px;
-        height: 250px;
-        background: linear-gradient(to top, black 50%, transparent);
-        z-index: 9;
-    }
-
-    .swiper-container .swiper-wrapper {
-        width: 100%;
-    }
-
-    .swiper-container .swiper-wrapper .swiper-slide {
-        display: flex;
-        background-color: rgb(32, 28, 28);
-        border-radius: 20px;
-    }
-
-    /* + : 다음 요소 선택 */
-    .swiper-slide-active+div+div {
-        background-color: black !important;
-        transition: all .5s;
-        cursor: pointer;
-        color: rgb(230, 230, 230);
-    }
-
-    .swiper-slide-active {
-        opacity: .6;
-    }
-
-    .swiper-slide-active+div+div+div+div {
-        opacity: .6;
-    }
-
-    .swiper-slide-active+div+div {
-        background-color: black !important;
-        transition: all .5s;
-        cursor: pointer;
-        color: rgb(230, 230, 230);
-    }
-
-    .swiper-slide-active+div+div .img {
-        background-color: aliceblue;
-        opacity: 1;
-    }
-
-    .picture {
-        display: flex;
-        flex: 1 1 0;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .picture .img {
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-        background-color: aliceblue;
-        opacity: .5;
-        overflow: hidden;
-    }
-
-    .profile {
-        flex: 2 1 0;
-    }
-
-    .profile h2 {
-        font-size: 26px;
-        margin-top: 12px;
-        margin-bottom: 5px;
-    }
-
-    .profile h2 span {
-        font-size: 17px;
-        margin-left: 12px;
-    }
-
-    .profile h3 {
-        font-size: 17px;
-        margin: 8px 0;
-        font-weight: 40;
-    }
-
-    .profile i {
-        position: absolute;
-        display: block;
-        color: aliceblue!important;
-        width: 50px;
-        height: 50px;
-        z-index: 99;
-    }
-</style>
-
-<body>
-    <div class="swiper-container">
-        <div class="swiper-wrapper">
+  <body>
+    <div class="wrap">
+      <div class="bg">
+        <div id="stars"></div>
+        <div id="star2"></div>
+        <div id="star3"></div>
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
             <div class="swiper-slide">Slide 1</div>
             <div class="swiper-slide">Slide 2</div>
             <div class="swiper-slide">
-                <div class="picture">
-                    <div class="img"><img src="./img/align.png" alt=""></div>
-                </div>
-                <div class="profile">
-                    <h2>스윗가이<span>2580세</span></h2>
-                    <h3>거주 행성 : 뚜두뚜두 행성</h3>
-                    <h3>직장 : 웜홀관리공단 </h3>
-                    <i class="fa-solid fa-triangle"></i>
-                </div>
-
+              <div class="picture">
+                <div class="img"><img src="./img/align.png" alt="" /></div>
+              </div>
+              <div class="profile">
+                <h2>스윗와사비<span>2580세</span></h2>
+                <h3>거주 행성 : 뚜두뚜두 행성</h3>
+                <h3>직장 : 웜홀관리공단</h3>
+                <i class="fa-solid fa-triangle"></i>
+              </div>
             </div>
             <div class="swiper-slide">Slide 4</div>
             <div class="swiper-slide">Slide 5</div>
             <div class="swiper-slide">Slide 6</div>
             <div class="swiper-slide">Slide 7</div>
-        </div>
-        <!-- <div class="swiper-button-next"></div>
+          </div>
+          <!-- <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div> -->
+        </div>
+      </div>
     </div>
-</body>
-<script>
-    $(function () {
-        new Swiper('.swiper-container', {
-            // 방향: vertical 수직, horizontal 수평, default: horizontal
-            direction: 'vertical',
-            // 드래그 기능 true/false
-            debugger: true,
-            // 무한 반복 기능 true/false
-            loop: false,
-            // 마지막 슬라이드 -> 첫슬라이드 자연스러운 반복 기능
-            loopAdditionalSlides: 1,
-            // 슬라이드간 간격
-            spaceBetween: 20,
-            // 한번에 보여 줄 슬라이드 개수
-            slidesPerView: 5,
-            // 그룹으로 묶을 슬라이드 수
-            slidesPerGroup: 1,
-            // 자동 스크롤링
-            // autoplay: {
-            // 1000: 1초
-            // delay: 2500,
-            // disableOnInteraction: false,
-            // },
-            // 페이징
-            pagination: {
-                // 페이징 클래스명
-                el: '.swiper-pagination',
-                // 클릭 가능 true/false
-                clickable: true,
-                // 타입: fraction, bullets, progressbar
-                type: 'fraction',
-            },
-            // 네비게이션
-            navigation: {
-                // 다음 버튼 클래스명
-                nextEl: '.swiper-button-next',
-                // 이전 버튼 클래스명
-                prevEl: '.swiper-button-prev',
-            },
-        });
-    })
-    // $(function(){
-    // var style_1 = {
-    //     "background-color": "black!important",
-    //     "border": "2px solid #f00"
-    // }
-
-    // $('.swiper-slide-active').next('.swiper-slide').css(style_1)
-    // })
-
-</script>
-
-
+  </body>
+  <script src="./js/chat.js"></script>
 </html>

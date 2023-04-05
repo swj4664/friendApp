@@ -3,9 +3,13 @@ body {
     padding: 0;
 }
 
-/* body::-webkit-scrollbar {
+a {
+    text-decoration: none;
+}
+
+body::-webkit-scrollbar {
     display: none;
-  } */
+  }
 
 .bg {
     position: fixed;
@@ -610,10 +614,33 @@ body {
 }
 
 .bg .earthWrap .earth {
-    width: 600px;
-    height: 600px;
+    width: 700px;
+    height: 700px;
     border-radius: 50%;
-    border: 2px solid rgb(196, 196, 196);
+    /* border: 2px solid rgb(196, 196, 196); */
+    background-image: url(../img/earth.png);
+    background-size: cover;
+    box-shadow: -20px -50px -20px -20px #000;
+    animation: earthR 100s linear infinite;
+}
+
+.bg .earthWrap .earth::after {
+    display: block;
+    content: '';
+    width: 700px;
+    height: 700px;
+    border-radius: 50%;
+    background-size: cover;
+    background: radial-gradient(circle 700px, transparent,40%, black,58%, black);
+    animation: earthR 100s linear infinite;
+}
+
+
+
+@keyframes earthR {
+    0% {
+        background-position: 100%;
+    }
 }
 
 .bg .scrollSign {
@@ -627,7 +654,7 @@ body {
 
 .contentHeight {
     width: 100vw;
-    height:5500px;
+    height:8000px;
 }
 
 
@@ -635,13 +662,13 @@ body {
 
 /* 타이핑 */
 
-
-.typingWrap .typing{
-    display: none;
+.typingWrap {
+    display: flex;
+    height: 100%;
+    justify-content: center;
 }
 
-.typingWrap .typing.active {
-    display: block;
+.typingWrap .typing{
     position: absolute;
     width: 740px;
     top: 50%;
@@ -650,6 +677,7 @@ body {
 }
 
 .typing a {
+    display: none;
     white-space: nowrap;
     border-right: 5px solid;
     overflow: hidden;
@@ -657,9 +685,26 @@ body {
     font-weight: 300;
     letter-spacing: .05em;
     color: aliceblue;
-    animation:
-        typing 2.5s steps(25),
-        cursor .4s step-end infinite alternate;
+}
+
+
+.typingWrap .typing2{
+    position: absolute;
+    width: 520px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.typing2 a {
+    display: none;
+    white-space: nowrap;
+    border-right: 5px solid;
+    overflow: hidden;
+    font-size: 40px;
+    font-weight: 300;
+    letter-spacing: .05em;
+    color: aliceblue;
 }
 
 @keyframes typing {
@@ -677,3 +722,40 @@ body {
         border-color: transparent;
     }
 }
+
+
+/* makeFriend 버튼 */
+.makeFriend {
+    display: none;
+    position: absolute;
+    border-radius: 35px;
+    border: 3px solid #00FF66;
+    color: aliceblue;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    bottom: 30%;
+    text-align: center;
+    padding: 16px 56px;
+    transition: all .5s;
+    margin: 0 auto;
+}
+
+
+
+
+/* .makeFriend::before {
+    display: block;
+    position: absolute;
+    content: '';
+    width: 250px;
+    height: 70px;
+    border-radius: 35px;
+    background: #00FF66;
+    color: aliceblue;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    filter: blur(10px);
+    z-index: -99;
+} */

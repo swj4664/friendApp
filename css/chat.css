@@ -1,0 +1,118 @@
+  .swiper-container {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    width: 480px;
+    height: 700px;
+    color: rgb(109, 109, 109);
+  }
+
+  .swiper-container::before {
+    content: "";
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 480px;
+    height: 250px;
+    background: linear-gradient(to bottom, black 50%, transparent);
+    z-index: 9;
+  }
+
+  .swiper-container::after {
+    content: "";
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    width: 480px;
+    height: 250px;
+    background: linear-gradient(to top, black 50%, transparent);
+    z-index: 9;
+  }
+
+  .swiper-container .swiper-wrapper {
+    width: 100%;
+  }
+
+  .swiper-container .swiper-wrapper .swiper-slide {
+    display: flex;
+    background-color: rgb(32, 28, 28);
+    border-radius: 20px;
+  }
+
+  /* + : 다음 요소 선택 */
+  .swiper-slide-active + div + div {
+    background-color: black !important;
+    transition: all 0.5s;
+    cursor: pointer;
+    color: rgb(230, 230, 230);
+  }
+
+  .swiper-slide-active {
+    opacity: 0.6;
+  }
+
+  .swiper-slide-active + div + div + div + div {
+    opacity: 0.6;
+  }
+
+  .swiper-slide-active + div + div {
+    background-color: black !important;
+    transition: all 0.5s;
+    cursor: pointer;
+    color: rgb(230, 230, 230);
+  }
+
+  .swiper-slide-active + div + div .img {
+    background-color: aliceblue;
+    opacity: 1;
+  }
+
+  .picture {
+    display: flex;
+    flex: 1 1 0;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .picture .img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: aliceblue;
+    opacity: 0.5;
+    overflow: hidden;
+  }
+
+  .profile {
+    flex: 2 1 0;
+  }
+
+  .profile h2 {
+    font-size: 26px;
+    margin-top: 12px;
+    margin-bottom: 5px;
+  }
+
+  .profile h2 span {
+    font-size: 17px;
+    margin-left: 12px;
+  }
+
+  .profile h3 {
+    font-size: 17px;
+    margin: 8px 0;
+    font-weight: 40;
+  }
+
+  .profile i {
+    position: absolute;
+    display: block;
+    color: aliceblue !important;
+    width: 50px;
+    height: 50px;
+    z-index: 99;
+  }
