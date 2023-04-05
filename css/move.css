@@ -1,0 +1,44 @@
+
+
+/* 타이핑 */
+
+.typingWrap .typing {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.typing {
+    width: 740px;
+}
+
+.typing a {
+    white-space: nowrap;
+    border-right: 5px solid;
+    overflow: hidden;
+    font-size: 40px;
+    font-weight: 300;
+    letter-spacing: .05em;
+    color: aliceblue;
+    animation:
+        typing 2.5s steps(25),
+        cursor .4s step-end infinite alternate;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes cursor {
+    50% {
+        border-color: transparent;
+    }
+}

@@ -7,13 +7,43 @@ body {
     display: none;
   } */
 
-
-
 .bg {
     position: fixed;
     width: 100vw;
     height: 100vh;
     background-color: black;
+
+}
+
+.bg .earthWrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.bg .textWrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    font-size: 200px;
+    font-weight: 900;
+    color: aliceblue;
+    text-align: center;
+    letter-spacing: -10px;
+}
+
+.bg .textWrap .text {
+    display: none;
+}
+
+.bg .earthWrap .earth {
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    border: 2px solid rgb(196, 196, 196);
 }
 
 .bg .scrollSign {
@@ -22,38 +52,14 @@ body {
     left: 50%;
     transform: translate(-50%, -70%);
     color: rgb(196, 196, 196);
-}
-
-.earthWrap {
-    overflow-y: auto;
-    height: 3000px;
-}
-
-.earthWrap .earthCenter {
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-}
-
-.earthWrap .earth {
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 600px;
-    height: 600px;
-    border-radius: 50%;
-    border: 2px solid rgb(196, 196, 196);
-}
-
-
-.textWrap {
-    height: 3000px;
-    font-size: 200px;
-    font-weight: 900;
-    color: aliceblue;
     text-align: center;
-    letter-spacing: -10px;
 }
+
+.contentHeight {
+    width: 100vw;
+    height: 10000px;
+}
+
+
+
 

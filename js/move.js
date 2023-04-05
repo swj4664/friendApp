@@ -37,5 +37,15 @@ console.log(scrollY)
         scrollSign.style.opacity = `${1 + scrollSecond}`
     }
 
+    // section3
+    if(scrollY > 4300){
+        typing.style.display = 'inline-block'
+        location.href = "move.html";
+    } else {
+        typing.style.display = 'none'
+    }
+
+    if(scrollY > 2000){
+    }
 });
 
