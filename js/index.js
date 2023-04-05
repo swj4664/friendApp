@@ -16,7 +16,7 @@ window.addEventListener("scroll", (event) => {
     earth.style.opacity = `${1 + scrollFirst}`
 }
 
-console.log(scrollY)
+
     
     if(scrollFirst <= -1) {
         earth.style.scale = '0'
@@ -36,6 +36,12 @@ console.log(scrollY)
         text.style.opacity = `${1 + scrollSecond}`
         scrollSign.style.opacity = `${1 + scrollSecond}`
     }
+
+    console.log(scrollY)
+    // typing
+    if(scrollY > 3000){
+        typing.classList.add = 'active'
+    } 
 
 });
 
