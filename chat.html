@@ -1,31 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css"
-    />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
-    <link rel="stylesheet" href="./css/index.css" />
-    <link rel="stylesheet" href="./css/chat.css" />
-    <title>Document</title>
-  </head>
 
-  <body>
-    <div class="wrap">
-      <div class="bg">
-        <div id="stars"></div>
-        <div id="star2"></div>
-        <div id="star3"></div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
+  <link rel="stylesheet" href="./css/index.css" />
+  <link rel="stylesheet" href="./css/chat.css" />
+  <link rel="stylesheet" href="./css/chat_re.css" />
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="bg">
+      <div id="stars"></div>
+      <div id="star2"></div>
+      <div id="star3"></div>
+      <div class="chatWrap">
         <div class="swiper-container">
           <div class="swiper-wrapper">
-            <div class="swiper-slide">Slide 1</div>
-            <div class="swiper-slide">Slide 2</div>
-            <div class="swiper-slide">
+            <div class="swiper-slide" value="0"></div>
+            <div class="swiper-slide" value="0"></div>
+            <div class="swiper-slide" value="1">
               <div class="picture">
                 <div class="img"><img src="./img/align.png" alt="" /></div>
               </div>
@@ -36,26 +36,96 @@
                 <i class="fa-solid fa-triangle"></i>
               </div>
             </div>
-            <div class="swiper-slide">
-               <div class="picture">
+            <div class="swiper-slide" value="2">
+              <div class="picture">
                 <div class="img"><img src="./img/align.png" alt="" /></div>
               </div>
               <div class="profile">
-                <h2>스윗와사비<span>2580세</span></h2>
+                <h2>에일리언<span>943세</span></h2>
+                <h3>거주 행성 : 뚜두뚜두 행성</h3>
+                <h3>직장 : 갤럭시교도소</h3>
+                <i class="fa-solid fa-triangle"></i>
+              </div>
+            </div>
+            <div class="swiper-slide" value="3">
+              <div class="picture">
+                <div class="img"><img src="./img/align.png" alt="" /></div>
+              </div>
+              <div class="profile">
+                <h2>게로로<span>576세</span></h2>
                 <h3>거주 행성 : 뚜두뚜두 행성</h3>
                 <h3>직장 : 웜홀관리공단</h3>
                 <i class="fa-solid fa-triangle"></i>
               </div>
             </div>
-            <div class="swiper-slide">Slide 5</div>
-            <div class="swiper-slide">Slide 6</div>
-            <div class="swiper-slide">Slide 7</div>
+            <div class="swiper-slide" value="4">
+              <div class="picture">
+                <div class="img"><img src="./img/align.png" alt="" /></div>
+              </div>
+              <div class="profile">
+                <h2>타마마<span>1455세</span></h2>
+                <h3>거주 행성 : 뚜두뚜두 행성</h3>
+                <h3>직장 : 웜홀관리공단</h3>
+                <i class="fa-solid fa-triangle"></i>
+              </div>
+            </div>
+            <div class="swiper-slide" value="5">
+              <div class="picture">
+                <div class="img"><img src="./img/align.png" alt="" /></div>
+              </div>
+              <div class="profile">
+                <h2>쿠루루<span>323세</span></h2>
+                <h3>거주 행성 : 뚜두뚜두 행성</h3>
+                <h3>직장 : 웜홀관리공단</h3>
+                <i class="fa-solid fa-triangle"></i>
+              </div>
+            </div>
+            <div class="swiper-slide" value="0"></div>
+            <div class="swiper-slide" value="0"></div>
           </div>
+
           <!-- <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div> -->
         </div>
+        <div class="detailSpace active"></div>
+        <div class="detail">
+          <div class="imgName"></div>
+          <div class="introduce"></div>
+          <div class="messageSend">
+            <button type="button">메세지 보내기1</button>
+          </div>
+        </div>
+        <div class="detail">
+          <div class="imgName"></div>
+          <div class="introduce"></div>
+          <div class="messageSend">
+            <button type="button">메세지 보내기2</button>
+          </div>
+        </div>
+        <div class="detail">
+          <div class="imgName"></div>
+          <div class="introduce"></div>
+          <div class="messageSend">
+            <button type="button">메세지 보내기3</button>
+          </div>
+        </div>
+        <div class="detail">
+          <div class="imgName"></div>
+          <div class="introduce"></div>
+          <div class="messageSend">
+            <button type="button">메세지 보내기4</button>
+          </div>
+        </div>
+        <div class="detail">
+          <div class="imgName"></div>
+          <div class="introduce"></div>
+          <div class="messageSend">
+            <button type="button">메세지 보내기5</button>
+          </div>
+        </div>
       </div>
     </div>
-  </body>
-  <script src="./js/chat.js"></script>
+  </div>
+</body>
+<script src="./js/chat.js"></script>
 </html>

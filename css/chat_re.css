@@ -1,0 +1,16 @@
+@media (max-width: 1000px) {
+    .chatWrap {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 480px;
+        height: 700px;
+      }
+      
+      .detailSpace.active{
+        display: none;
+      }
+}
