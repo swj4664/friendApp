@@ -13,4 +13,54 @@
       .detailSpace.active{
         display: none;
       }
+      
+}
+
+@media (max-width: 500px) {
+  .chatWrap {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 380px;
+    height: 600px;
+  }
+  
+  .detailSpace.active{
+    display: none;
+  }
+
+  .picture .img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-color: aliceblue;
+    opacity: 0.5;
+    overflow: hidden;
+  }
+
+  .profile {
+    flex: 2 1 0;
+    padding-left: 10px;
+  }
+
+  .profile h2 {
+    font-size: 20px;
+    margin-top: 8px;
+    margin-bottom: 5px;
+  }
+
+  .profile h2 span {
+    font-size: 14px;
+    margin-left: 12px;
+  }
+
+  .profile h3 {
+    font-size: 14px;
+    margin: 8px 0;
+    font-weight: 40;
+  }
+
 }

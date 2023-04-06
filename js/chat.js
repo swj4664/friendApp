@@ -39,15 +39,52 @@ $(function () {
   });
 });
 
-let detail = document.querySelectorAll('.detail')
+window.onresize = function(){
+  if (window.innerWidth <= 1000 && window.innerWidth >= 990) {
+  document.location.reload();
+  }
+};
+
+
+
+let detailContent = document.querySelectorAll('.detail_content')
+let detail = document.querySelector('.detail')
 let detailSpace = document.querySelector('.detailSpace')
+let swiperContainer = document.querySelector('.swiper-container')
+let cancelChat = document.querySelector('.cancelChat')
+let messageSend = document.querySelector('.messageSend button') //임시
 $('.swiper-slide').next().on('click', function () {
   let num = $(this).attr("value")
   detailSpace.classList.remove('active')
+  detail.classList.add('active')
   if (num != 0) {
-    detail.forEach(element => {
+    detailContent.forEach(element => {
       element.classList.remove('active')
     });
-    detail[num - 1].classList.add('active')
+    detailContent[num - 1].classList.add('active')
   }
+  cancelChat.addEventListener('click', function(){
+    swiperContainer.style.flex = '1'
+    detail.classList.remove('active')
+    detailSpace.classList.add('active')
+  })
 })
+
+if (window.innerWidth <= 1000) {
+  $('.swiper-slide').next().on('click', function () {
+    let num = $(this).attr("value")
+    detailSpace.classList.remove('active')
+    swiperContainer.style.flex = '0'
+    detail.classList.add('active')
+    if (num != 0) {
+      detailContent.forEach(element => {
+        element.classList.remove('active')
+      });
+      detailContent[num - 1].classList.add('active')
+    }
+  })
+  cancelChat.addEventListener('click', function(){
+    swiperContainer.style.flex = '1'
+    detail.classList.remove('active')
+  })
+}

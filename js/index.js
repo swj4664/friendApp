@@ -1,3 +1,7 @@
+// window.onresize = function(){
+//     document.location.reload();
+//   };
+
 
 window.addEventListener("scroll", (event) => {
     let scrollY = this.scrollY;
