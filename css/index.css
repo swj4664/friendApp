@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+
 body {
     margin: 0;
     padding: 0;
+    font-family: 'Noto Sans KR', sans-serif;
 }
 
 a {
@@ -661,6 +664,7 @@ body::-webkit-scrollbar {
 .bg .textWrap .text {
     display: none;
     width: 100%;
+    letter-spacing: 1px;
 }
 
 .bg .earthWrap .earth {
@@ -720,7 +724,7 @@ body::-webkit-scrollbar {
 
 .typingWrap .typing {
     position: absolute;
-    width: 720px;
+    width: 676.2px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -740,7 +744,7 @@ body::-webkit-scrollbar {
 
 .typingWrap .typing2 {
     position: absolute;
-    width: 582px;
+    width: 535.5px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);

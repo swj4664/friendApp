@@ -39,10 +39,6 @@ window.addEventListener("scroll", (event) => {
         text.style.opacity = `${1 + scrollSecond}`
     }
 
-    console.log(scrollY)
-
-
-
 
     // typing
     if(scrollY > 4500 && scrollY < 5500){
