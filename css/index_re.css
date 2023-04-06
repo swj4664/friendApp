@@ -10,6 +10,19 @@
         animation: earthR 30s linear infinite;
     }
 
+    .plzScroll {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 306px;
+        transform: translate(-50%, -50%);
+        color: #e0e0e0;
+        font-size: 26px;
+        letter-spacing: 7px;
+        z-index: 999;
+        animation: scrollBlink 2s ease infinite;
+    }
+
     .bg .earthWrap .earth::after {
         display: block;
         content: '';

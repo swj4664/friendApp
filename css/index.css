@@ -700,6 +700,32 @@ body::-webkit-scrollbar {
     }
 }
 
+.plzScroll {
+    position: absolute;
+    width: 390px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #e0e0e0;
+    font-size: 35px;
+    letter-spacing: 7px;
+    z-index: 999;
+    animation: scrollBlink 2s ease infinite;
+}
+
+@keyframes scrollBlink {
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
 .bg .scrollSign {
     position: absolute;
     bottom: 0;
@@ -708,7 +734,20 @@ body::-webkit-scrollbar {
     color: rgb(196, 196, 196);
     text-align: center;
     z-index: 999;
+    animation: jump 1s ease infinite;
 }
+@keyframes jump {
+    0%{
+        transform: translate(-50%, -70%);
+    }
+    50%{
+        transform: translate(-50%, -60%);
+    }
+    100%{
+        transform: translate(-50%, -70%);
+    }
+}
+
 
 .contentHeight {
     width: 100vw;
