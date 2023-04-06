@@ -16,7 +16,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    animation: scaleUp 3.3s linear alternate;
+    animation: scaleUp 3.5s linear alternate;
 }
 
 @keyframes scaleUp {
@@ -59,28 +59,28 @@
 }
 
 .titleWrap .titleContent .text1 {
-    animation: transText1 3.3s linear alternate
+    animation: transText1 3.5s linear alternate
 }
 .titleWrap .titleContent .text2 {
-    animation: transText2 3.3s linear alternate
+    animation: transText2 3.5s linear alternate
 }
 .titleWrap .titleContent .text3 {
-    animation: transText3 3.3s linear alternate
+    animation: transText3 3.5s linear alternate
 }
 .titleWrap .titleContent .text4 {
-    animation: transText4 3.3s linear alternate
+    animation: transText4 3.5s linear alternate
 }
 .titleWrap .titleContent .text5 {
-    animation: transText5 3.3s linear alternate
+    animation: transText5 3.5s linear alternate
 }
 .titleWrap .titleContent .text6 {
-    animation: transText6 3.3s linear alternate
+    animation: transText6 3.5s linear alternate
 }
 .titleWrap .titleContent .text7 {
-    animation: transText7 3.3s linear alternate
+    animation: transText7 3.5s linear alternate
 }
 .titleWrap .titleContent .text8 {
-    animation: transText8 3.3s linear alternate
+    animation: transText8 3.5s linear alternate
 }
 
 @keyframes transText1 {

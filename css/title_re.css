@@ -6,7 +6,7 @@
         justify-content: center;
         align-items: center;
         scale: .7;
-        animation: scaleUp2 3.3s linear alternate;
+        animation: scaleUp2 3.5s linear alternate;
     }
 
     
@@ -63,7 +63,7 @@
         justify-content: center;
         align-items: center;
         scale: .5;
-        animation: scaleUp3 3.3s linear alternate;
+        animation: scaleUp3 3.5s linear alternate;
     }
 
     @keyframes scaleUp3 {
