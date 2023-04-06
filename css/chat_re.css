@@ -13,7 +13,6 @@
       .detailSpace.active{
         display: none;
       }
-      
 }
 
 @media (max-width: 500px) {
@@ -26,6 +25,26 @@
     transform: translate(-50%, -50%);
     width: 380px;
     height: 600px;
+  }
+
+  .detail.active {
+    display: flex;
+    flex: 1 1 0;
+    margin: 50px 15px;
+    border: 2px solid #acacac;
+    border-radius: 20px;
+  }
+
+  .cancelChat {
+    position: absolute;
+    top: 60px;
+    right: 30px;
+    padding: 10px;
+    font-size: 25px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #00FF66;
   }
   
   .detailSpace.active{
