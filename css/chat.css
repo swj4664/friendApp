@@ -198,12 +198,45 @@ element {
   }
 
   .imgName {
+    display: flex;
     flex: 3 1 0;
+    
   }
 
-  .imgName img {
-    flex: 3 1 0;
+  .imgName .imgNameImg {
+    display: flex;
+    flex: 1 1 0;
+    justify-content: center;
+    align-items: center;
   }
+
+  .imgName .imgNameImg img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background: white;
+    background-image: url(../img/align.png);
+    background-size: cover;
+  }
+
+  .imgName .imgNameName {
+    display: flex;
+    flex: 1 1 0;
+    align-items:end;
+    color: #e6e6e6;
+    font-size: 22px;
+  }
+
+  .imgName .imgNameName h4 {
+    flex: 1 1 0;
+    margin-bottom: 34px;
+  }
+
+  .imgName .imgNameName h4 span {
+    font-size: 18px;
+  }
+
+
 
   .introduce {
     flex: 5 1 0;
