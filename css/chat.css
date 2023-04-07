@@ -217,8 +217,6 @@ element {
   height: 140px;
   border-radius: 50%;
   background: white;
-  background-image: url(../img/align.png);
-  background-size: cover;
 }
 
 .imgName .imgNameName {
