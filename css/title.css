@@ -258,6 +258,11 @@
 
 
 .adSkip {
+    display: none;
+}
+
+.adSkip.show {
+    display: block;
     position: absolute;
     bottom: 10%;
     right: 10%;
@@ -272,6 +277,7 @@
     animation: blink .5s ease alternate infinite;
     transition: all .3s;
 }
+
 
 .adSkip:hover {
     border: 1px solid #00FF66;

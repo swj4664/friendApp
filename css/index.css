@@ -678,7 +678,7 @@ body::-webkit-scrollbar {
     background-image: url(../img/earth.png);
     background-size: cover;
     box-shadow: -20px -50px -20px -20px #000;
-    animation: earthR 30s linear infinite;
+    animation: earthR 15s linear infinite alternate;
 }
 
 .bg .earthWrap .earth::after {

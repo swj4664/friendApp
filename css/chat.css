@@ -293,3 +293,121 @@ element {
   cursor: pointer;
   color: #00FF66;
 }
+
+
+/* 로딩화면 */
+
+.loading {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  z-index: 9999;
+  transition: visibility 2.5s;
+}
+
+.loading.hidden {
+  visibility: hidden;
+}
+
+.loading .barBg {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 8px;
+  border-radius: 4px;
+  background: rgb(150, 150, 150, .5);
+}
+
+
+
+.loading .barBg p {
+  position: absolute;
+  color: #e9e9e9;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -60px;
+}
+
+.loading .barBg .chaOne{
+  position: absolute;
+  left: -20px;
+  bottom: 20px;
+  background: #0011ff;
+  translate: 250px;
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  animation: chaUp 2s linear
+}
+
+@keyframes chaUp {
+  0%{
+    translate: 0px;
+  }
+  20%{
+    translate: 20px;
+  }
+  40%{
+    translate: 100px;
+  }
+  70%{
+    translate: 120px;
+  }
+  80%{
+    translate: 170px;
+  }
+  92%{
+    translate: 200px;
+  }
+  100%{
+    translate: 250px;
+  }
+}
+
+
+.loading .barBg .chaTwo{
+  position: absolute;
+  bottom: 20px;
+  right: -20px;
+  background: #ff00c8;
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+}
+
+.loading .barBg .barGauge {
+  position: absolute;
+  top: 0;
+  background: #00FF66;
+  width: 300px;
+  height: 8px;
+  border-radius: 4px;
+  animation: gaugeUp 2s linear
+}
+
+@keyframes gaugeUp {
+  0%{
+    width: 8px;
+  }
+  20%{
+    width: 20px;
+  }
+  40%{
+    width: 100px;
+  }
+  70%{
+    width: 120px;
+  }
+  80%{
+    width: 170px;
+  }
+  92%{
+    width: 200px;
+  }
+  100%{
+    width: 300px;
+  }
+}

@@ -1,4 +1,19 @@
 $(function () {
+
+  // 프로필 데이터 가져오기
+  $.ajax({
+    type: "get",
+    url: "profile.json",
+    dataType: "json",
+    success: function (data) {
+      profileFunction(data.records)
+    },
+    error: function () {
+      alert('실패')
+    }
+  })
+
+  // 스와이퍼 
   new Swiper(".swiper-container", {
     // 방향: vertical 수직, horizontal 수평, default: horizontal
     direction: "vertical",
@@ -38,14 +53,7 @@ $(function () {
     },
   });
 });
-
-window.onresize = function(){
-  if (window.innerWidth <= 1000 && window.innerWidth >= 990) {
-  document.location.reload();
-  }
-};
-
-
+// 스와이퍼 끝
 
 let detailContent = document.querySelectorAll('.detail_content')
 let detail = document.querySelector('.detail')
@@ -63,7 +71,7 @@ $('.swiper-slide').next().on('click', function () {
     });
     detailContent[num - 1].classList.add('active')
   }
-  cancelChat.addEventListener('click', function(){
+  cancelChat.addEventListener('click', function () {
     swiperContainer.style.flex = '1'
     detail.classList.remove('active')
     detailSpace.classList.add('active')
@@ -83,8 +91,42 @@ if (window.innerWidth <= 1000) {
       detailContent[num - 1].classList.add('active')
     }
   })
-  cancelChat.addEventListener('click', function(){
+  cancelChat.addEventListener('click', function () {
     swiperContainer.style.flex = '1'
     detail.classList.remove('active')
   })
 }
+
+
+
+
+
+function profileFunction(profileData) {
+  let profileAdd = ''
+  profileData.map((data, index) => { //
+    profileAdd +=` <div class="swiper-slide" value = "${index}" >
+                <div class="picture">
+                  <div class="img"><img src="./img/${data.img}" alt="" /></div>
+                </div>
+                <div class="profile">
+                  <h2>${data.name}<span>${data.age}세</span></h2>
+                  <h3>거주 행성 : ${data.live}</h3>
+                  <h3>직업 : ${data.job}</h3>
+                  <i class="fa-solid fa-triangle"></i>
+                </div>
+                </div>`
+  })
+  console.log(profileAdd)
+  $('.swiper-slide:nth-last-child(2)').before(profileAdd)
+}
+
+window.addEventListener('load', () => {
+  let loading = document.querySelector('.loading')
+  loading.classList.add('hidden')
+  loading.addEventListener('transitionend', () => {
+    document.querySelector('.wrap').removeChild(loading)
+  })
+
+})
+
+

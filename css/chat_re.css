@@ -1,133 +1,133 @@
 @media (max-width: 1000px) {
-    .chatWrap {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 480px;
-        height: 700px;
-      }
-      
-      .detailSpace.active{
-        display: none;
-      }
+  .chatWrap {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 480px;
+      height: 700px;
+    }
+    
+    .detailSpace.active{
+      display: none;
+    }
 }
 
 @media (max-width: 500px) {
-  .chatWrap {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 380px;
-    height: 600px;
-  }
+.chatWrap {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 380px;
+  height: 600px;
+}
 
-  .detail.active {
-    display: flex;
-    flex: 1 1 0;
-    margin: 50px 15px;
-    border: 2px solid #acacac;
-    border-radius: 20px;
-  }
+.detail.active {
+  display: flex;
+  flex: 1 1 0;
+  margin: 50px 15px;
+  border: 2px solid #acacac;
+  border-radius: 20px;
+}
 
-  .cancelChat {
-    position: absolute;
-    top: 60px;
-    right: 30px;
-    padding: 10px;
-    font-size: 25px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: #00FF66;
-  }
-  
-  .detailSpace.active{
-    display: none;
-  }
+.cancelChat {
+  position: absolute;
+  top: 60px;
+  right: 30px;
+  padding: 10px;
+  font-size: 25px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #00FF66;
+}
 
-  .picture .img {
-    width: 90px;
-    height: 90px;
-    border-radius: 50%;
-    background-color: aliceblue;
-    opacity: 0.5;
-    overflow: hidden;
-  }
+.detailSpace.active{
+  display: none;
+}
 
-  .profile {
-    flex: 2 1 0;
-    padding-left: 10px;
-  }
+.picture .img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background-color: aliceblue;
+  opacity: 0.5;
+  overflow: hidden;
+}
 
-  .profile h2 {
-    font-size: 20px;
-    margin-top: 8px;
-    margin-bottom: 5px;
-  }
+.profile {
+  flex: 2 1 0;
+  padding-left: 10px;
+}
 
-  .profile h2 span {
-    font-size: 14px;
-    margin-left: 12px;
-  }
+.profile h2 {
+  font-size: 20px;
+  margin-top: 8px;
+  margin-bottom: 5px;
+}
 
-  .profile h3 {
-    font-size: 14px;
-    margin: 8px 0;
-    font-weight: 40;
-  }
+.profile h2 span {
+  font-size: 14px;
+  margin-left: 12px;
+}
 
-  .messageSend button {
-    width: 220px;
-    height: 55px;
-    font-size: 20px;
-    font-weight: 600;
-    color: #eeeeee;
-    background: none;
-    border: 3px solid #00FF66;
-    border-radius: 35px;
-  }
+.profile h3 {
+  font-size: 14px;
+  margin: 8px 0;
+  font-weight: 40;
+}
 
-  .imgName .imgNameImg img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    background: white;
-  }
-  
-  .imgName .imgNameName {
-    display: flex;
-    flex: 1 1 0;
-    align-items: end;
-    color: #e6e6e6;
-    font-size: 18px;
-  }
+.messageSend button {
+  width: 220px;
+  height: 55px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #eeeeee;
+  background: none;
+  border: 3px solid #00FF66;
+  border-radius: 35px;
+}
 
-  .imgName .imgNameName h4 {
-    flex: 1 1 0;
-    margin-bottom: 25px;
-  }
-  
-  .imgName .imgNameName h4 span {
-    font-size: 14px;
-  }
+.imgName .imgNameImg img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: white;
+}
 
-  .messageSend .forShadow button {
-    width: 210px;
-    height: 60px;
-    font-size: 20px;
-    font-weight: 600;
-    color: #eeeeee;
-    background: none;
-    border: 3px solid #00FF66;
-    border-radius: 35px;
-  }
-  
-  
+.imgName .imgNameName {
+  display: flex;
+  flex: 1 1 0;
+  align-items: end;
+  color: #e6e6e6;
+  font-size: 18px;
+}
+
+.imgName .imgNameName h4 {
+  flex: 1 1 0;
+  margin-bottom: 25px;
+}
+
+.imgName .imgNameName h4 span {
+  font-size: 14px;
+}
+
+.messageSend .forShadow button {
+  width: 210px;
+  height: 60px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #eeeeee;
+  background: none;
+  border: 3px solid #00FF66;
+  border-radius: 35px;
+}
+
+
 
 }

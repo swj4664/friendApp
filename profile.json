@@ -1,0 +1,48 @@
+{
+    "alien": [
+        {"id": "img"},
+        {"id": "name"},
+        {"id": "age"},
+        {"id": "live"},
+        {"id": "job"},
+        {"id": "mbti"},
+        {"id": "charm"},
+        {"id": "hobby"},
+        {"id": "talk"}
+    ],
+    "records": [
+        {
+            "img": "align.png",
+            "name": "스윗와사비",
+            "age": "2580",
+            "live": "금천 행성",
+            "job": "웜홀관리공단 워프정비공",
+            "mbti": "ESTPJQUERY-VUEJS",
+            "charm": "구릿빛 연두색 피부, 88cm의 훤칠한 키",
+            "hobby": "혜성타기",
+            "talk": "부담갖지말고 편하게 연락 주세요 ^^"
+        },
+        {
+            "img": "align.png",
+            "name": "스윗와사비2",
+            "age": "2580",
+            "live": "금천 행성",
+            "job": "웜홀관리공단 워프정비공",
+            "mbti": "ESTPJQUERY-VUEJS",
+            "charm": "구릿빛 연두색 피부, 88cm의 훤칠한 키",
+            "hobby": "혜성타기",
+            "talk": "부담갖지말고 편하게 연락 주세요 ^^"
+        },
+        {
+            "img": "align.png",
+            "name": "스윗와사비3",
+            "age": "2580",
+            "live": "금천 행성",
+            "job": "웜홀관리공단 워프정비공",
+            "mbti": "ESTPJQUERY-VUEJS",
+            "charm": "구릿빛 연두색 피부, 88cm의 훤칠한 키",
+            "hobby": "혜성타기",
+            "talk": "부담갖지말고 편하게 연락 주세요 ^^"
+        }
+    ]
+}
