@@ -156,6 +156,4 @@ window.addEventListener('load', () => {
     document.querySelector('.wrap').removeChild(loading)
   })
 })
-
-
 });

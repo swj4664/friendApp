@@ -1,6 +1,7 @@
 // window.onresize = function(){
 //     document.location.reload();
 //   };
+ 
 
 
 window.addEventListener("scroll", (event) => {
@@ -29,7 +30,7 @@ window.addEventListener("scroll", (event) => {
     } else {
         plzScroll.style.display = `block`
     }
-    
+
 
     if (scrollFirst <= -1) {
         earth.style.scale = '0'
