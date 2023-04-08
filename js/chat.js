@@ -13,6 +13,101 @@ $(function () {
     }
   })
 
+
+
+
+
+
+let detailSpace = document.querySelector('.detailSpace')
+let swiperContainer = document.querySelector('.swiper-container')
+let messageSend = document.querySelector('.messageSend button') //임시
+
+
+
+
+
+function profileFunction(profileData) {
+  let profileAdd = ''
+  let profileDetailAdd = ''
+  profileData.map((data, index) => { //
+    profileAdd += ` <div class="swiper-slide" value = "${index + 1}" >
+                <div class="picture">
+                  <div class="img"><img src="./img/${data.img}" alt="" /></div>
+                </div>
+                <div class="profile">
+                  <h2>${data.name}<span>${data.age}세</span></h2>
+                  <h3>거주 행성 : ${data.live}</h3>
+                  <h3>직업 : ${data.job}</h3>
+                  <i class="fa-solid fa-triangle"></i>
+                </div>
+                </div>`
+    profileDetailAdd += `
+    <div class="detail_content" value = "${index + 1}">
+        <div class="imgName">
+          <div class="imgNameImg"><img src="./img/${data.img}" alt=""></div>
+          <div class="imgNameName"><h4>${data.name}<span>&nbsp;&nbsp;${data.age}세</span></h4></div>
+        </div>
+        <div class="introduce">
+          <p>
+          거주 행성 : ${data.live}<br><br>
+          직업 : ${data.job}<br><br>
+          MBTI : ${data.mbti} <br><br>
+          매력 : ${data.charm}<br><br>
+          취미 : ${data.hobby}<br><br>
+          하고싶은 말 : ${data.talk}<br><br>
+         </p>
+        </div>
+        <div class="messageSend">
+          <div class="forShadow">
+          <button type="button">메세지 보내기</button>
+          </div>
+        </div>
+    </div>
+    `
+  })
+  $('.detail').append(profileDetailAdd)
+  $('.swiper-slide:nth-last-child(2)').before(profileAdd)
+
+  let detail = document.querySelector('.detail')
+  let detailContent = document.querySelectorAll('.detail_content')
+  let cancelChat = document.querySelector('.cancelChat')
+
+  $('.swiper-slide').on('click', function () {
+    let num = $(this).attr("value")
+    detailSpace.classList.remove('active')
+    detail.classList.add('active')
+    if (num != 0) {
+      detailContent.forEach(element => {
+        element.classList.remove('active')
+      });
+      detailContent[num - 1].classList.add('active')
+    }
+    cancelChat.addEventListener('click', function () {
+      swiperContainer.style.flex = '1'
+      detail.classList.remove('active')
+      detailSpace.classList.add('active')
+    })
+  })
+
+  if (window.innerWidth <= 1000) {
+    $('.swiper-slide').on('click', function () {
+      let num = $(this).attr("value")
+      detailSpace.classList.remove('active')
+      swiperContainer.style.flex = '0'
+      detail.classList.add('active')
+      if (num != 0) {
+        detailContent.forEach(element => {
+          element.classList.remove('active')
+        });
+        detailContent[num - 1].classList.add('active')
+      }
+    })
+    cancelChat.addEventListener('click', function () {
+      swiperContainer.style.flex = '1'
+      detail.classList.remove('active')
+    })
+  }
+
   // 스와이퍼 
   new Swiper(".swiper-container", {
     // 방향: vertical 수직, horizontal 수평, default: horizontal
@@ -52,72 +147,6 @@ $(function () {
       prevEl: ".swiper-button-prev",
     },
   });
-});
-// 스와이퍼 끝
-
-let detailContent = document.querySelectorAll('.detail_content')
-let detail = document.querySelector('.detail')
-let detailSpace = document.querySelector('.detailSpace')
-let swiperContainer = document.querySelector('.swiper-container')
-let cancelChat = document.querySelector('.cancelChat')
-let messageSend = document.querySelector('.messageSend button') //임시
-$('.swiper-slide').next().on('click', function () {
-  let num = $(this).attr("value")
-  detailSpace.classList.remove('active')
-  detail.classList.add('active')
-  if (num != 0) {
-    detailContent.forEach(element => {
-      element.classList.remove('active')
-    });
-    detailContent[num - 1].classList.add('active')
-  }
-  cancelChat.addEventListener('click', function () {
-    swiperContainer.style.flex = '1'
-    detail.classList.remove('active')
-    detailSpace.classList.add('active')
-  })
-})
-
-if (window.innerWidth <= 1000) {
-  $('.swiper-slide').next().on('click', function () {
-    let num = $(this).attr("value")
-    detailSpace.classList.remove('active')
-    swiperContainer.style.flex = '0'
-    detail.classList.add('active')
-    if (num != 0) {
-      detailContent.forEach(element => {
-        element.classList.remove('active')
-      });
-      detailContent[num - 1].classList.add('active')
-    }
-  })
-  cancelChat.addEventListener('click', function () {
-    swiperContainer.style.flex = '1'
-    detail.classList.remove('active')
-  })
-}
-
-
-
-
-
-function profileFunction(profileData) {
-  let profileAdd = ''
-  profileData.map((data, index) => { //
-    profileAdd +=` <div class="swiper-slide" value = "${index}" >
-                <div class="picture">
-                  <div class="img"><img src="./img/${data.img}" alt="" /></div>
-                </div>
-                <div class="profile">
-                  <h2>${data.name}<span>${data.age}세</span></h2>
-                  <h3>거주 행성 : ${data.live}</h3>
-                  <h3>직업 : ${data.job}</h3>
-                  <i class="fa-solid fa-triangle"></i>
-                </div>
-                </div>`
-  })
-  console.log(profileAdd)
-  $('.swiper-slide:nth-last-child(2)').before(profileAdd)
 }
 
 window.addEventListener('load', () => {
@@ -126,7 +155,7 @@ window.addEventListener('load', () => {
   loading.addEventListener('transitionend', () => {
     document.querySelector('.wrap').removeChild(loading)
   })
-
 })
 
 
+});

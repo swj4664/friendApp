@@ -12,7 +12,7 @@
     ],
     "records": [
         {
-            "img": "align.png",
+            "img": "alien.png",
             "name": "스윗와사비",
             "age": "2580",
             "live": "금천 행성",
@@ -23,26 +23,37 @@
             "talk": "부담갖지말고 편하게 연락 주세요 ^^"
         },
         {
-            "img": "align.png",
-            "name": "스윗와사비2",
-            "age": "2580",
-            "live": "금천 행성",
-            "job": "웜홀관리공단 워프정비공",
-            "mbti": "ESTPJQUERY-VUEJS",
-            "charm": "구릿빛 연두색 피부, 88cm의 훤칠한 키",
-            "hobby": "혜성타기",
-            "talk": "부담갖지말고 편하게 연락 주세요 ^^"
+            "img": "alien2.png",
+            "name": "꼬양",
+            "age": "576",
+            "live": "주파 행성",
+            "job": "주파상권진흥회 사무직",
+            "mbti": "INFPJQUERY-VUEJS",
+            "charm": "항상 긍정적입니다;D",
+            "hobby": "행성일주",
+            "talk": "여행다니는 거 좋아해요! 함께 여행다녀요~"
         },
         {
-            "img": "align.png",
-            "name": "스윗와사비3",
-            "age": "2580",
-            "live": "금천 행성",
-            "job": "웜홀관리공단 워프정비공",
-            "mbti": "ESTPJQUERY-VUEJS",
-            "charm": "구릿빛 연두색 피부, 88cm의 훤칠한 키",
-            "hobby": "혜성타기",
-            "talk": "부담갖지말고 편하게 연락 주세요 ^^"
+            "img": "alien3.png",
+            "name": "날아올라",
+            "age": "1622",
+            "live": "치타우리 행성",
+            "job": "블랙홀월드 동물원 사육사",
+            "mbti": "ENFJJQUERY-VUEJS",
+            "charm": "동물을 사랑하는 마음...",
+            "hobby": "피닉스 키우기",
+            "talk": "피닉스 구경시켜드릴께요..."
+        },
+        {
+            "img": "alien4.png",
+            "name": "갤럭시유학파",
+            "age": "343",
+            "live": "미주리 행성",
+            "job": "미주리대학 워프공학과",
+            "mbti": "ESTJJQUERY-VUEJS",
+            "charm": "3개 행성어 가능. '갤럭시애플'컴퍼니 인턴. 엘리트 코스 밟는 중... ",
+            "hobby": "책읽고 토론하는 것 좋아합니다.",
+            "talk": "같이 책 읽고 토론합시다. 지식은 재산입니다."
         }
     ]
 }
