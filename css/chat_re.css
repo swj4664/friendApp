@@ -54,8 +54,6 @@
 .picture .img {
   width: 90px;
   height: 90px;
-  border-radius: 50%;
-  background-color: aliceblue;
   opacity: 0.5;
   overflow: hidden;
 }
