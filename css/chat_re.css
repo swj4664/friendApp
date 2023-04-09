@@ -2,7 +2,8 @@
   .chatWrap {
     display: flex;
     flex-direction: column;
-    align-self: center;
+    justify-content: center;
+    align-items: center;
     width: 480px;
     height: 700px;
   }
@@ -61,10 +62,6 @@
   .chatWrap {
     display: flex;
     flex-direction: column;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     width: 380px;
     height: 600px;
   }
@@ -169,8 +166,8 @@
   .upDown {
     position: absolute;
     top: 47%;
-    left: -38%;
-    width: 600px;
+    left: -50%;
+    width: 550px;
     height: 30px;
     transform: rotate(90deg);
     z-index: 999;
