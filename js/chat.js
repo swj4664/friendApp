@@ -72,7 +72,6 @@ $(function () {
     let detailContent = document.querySelectorAll('.detail_content')
     let cancelChat = document.querySelector('.cancelChat')
 
-
     $('.swiper-slide').on('click', function () {
       let num = $(this).attr("value")
       detailSpace.classList.remove('active')
@@ -149,18 +148,113 @@ $(function () {
       },
     });
 
-    let messageSend = document.querySelector('.messageSend button')
-    let messageSendBg = document.querySelector('.messageSendBg')
-    let messageBoxCancel = document.querySelector('.messageBoxCancel')
-    messageSend.addEventListener('click', () => {
 
-      messageSendBg.classList.add('active')
+    let messageSendBgAdd = ''
+    profileData.map((data, index) => { //
+      messageSendBgAdd += `<div class="messageSendBg" value = "${index + 1}">
+      <div class="sendBox">
+        <div class="messageTitle">
+          <h2>${data.name}<span>님과 대화중</span></h2>
+        </div>
+        <div class="message1">
+          <div class="message1_msg"></div>
+        </div>
+        <div class="message2">
+          <div class="message2_msg"></div>
+        </div>
+        <div class="space"></div>
+        <div class="notAllow"><p>차단되었습니다.</p></div>
+        <div class="sendMessage">
+          <form class="formMessage" action="" onsubmit="return false">
+            <input class="messageInput" type="text">
+            <button class="sendClick">보내기</button>
+          </form>
+        </div>
+        <div class="messageBoxCancel"><i class="fa-solid fa-xmark"></i></div>
+      </div>
+    </div>`
     })
+    $('.wrap').append(messageSendBgAdd)
 
-
-    messageBoxCancel.addEventListener('click', () => {
-      messageSendBg.classList.remove('active')
-    })
+    let messageSend = document.querySelectorAll('.messageSend button')
+    let messageSendBg = document.querySelectorAll('.messageSendBg')
+    let messageBoxCancel = document.querySelectorAll('.messageBoxCancel')
+    let formMessage = document.querySelectorAll('.formMessage')
+    let message1_msg = document.querySelectorAll('.message1_msg')
+    let message2_msg = document.querySelectorAll('.message2_msg')
+    let message2 = document.querySelectorAll('.message2')
+    let messageInput = document.querySelectorAll('.messageInput')
+    let notAllow = document.querySelectorAll('.notAllow')
+    let sendClick = document.querySelectorAll('.sendClick')
+    for (let i = 0; i < messageSend.length; i++) {
+      messageSend[i].addEventListener('click', () => {
+        messageSendBg[i].classList.add('active')
+      })
+      messageBoxCancel[i].addEventListener('click', () => {
+        messageSendBg[i].classList.remove('active')
+      })
+      formMessage[i].addEventListener('keyup', () => {
+        message1_msg[i].style.display = 'block'
+        message1_msg[i].style.animation = 'blinkMsg 1s ease infinite'
+        message1_msg[i].innerText = '. . .'
+        if (window.event.keyCode == 13) {
+          message1_msg[i].style.animation = 'none'
+          let messageVal = messageInput[i].value
+          message1_msg[i].innerText = `${messageVal}`
+          setTimeout(() => {
+            message2[i].classList.add('active')
+            message2_msg[i].innerText = '. . .'
+            message2_msg[i].style.animation = 'blinkMsg 1s ease infinite'
+          }, 1000);
+          setTimeout(() => {
+            if(i == 0){
+              message2_msg[i].innerText = '차단이요.'
+            }
+            if(i == 1){
+              message2_msg[i].innerText = '남친있어요~'
+            }
+            if(i == 2){
+              message2_msg[i].innerText = '피닉스 많이 사랑해주세요...'
+            }
+            if(i == 3){
+              message2_msg[i].innerText = '경제 토론 좋아하세요? 아니죠?'
+            }
+            message2_msg[i].style.animation = 'none'
+          }, 3000);
+          setTimeout(() => {
+            notAllow[i].classList.add('active')
+          }, 4500);
+        }
+      })
+      sendClick[i].addEventListener('click', ()=>{
+        message1_msg[i].style.animation = 'none'
+          let messageVal = messageInput[i].value
+          message1_msg[i].innerText = `${messageVal}`
+          setTimeout(() => {
+            message2[i].classList.add('active')
+            message2_msg[i].innerText = '. . .'
+            message2_msg[i].style.animation = 'blinkMsg 1s ease infinite'
+          }, 1000);
+          setTimeout(() => {
+            if(i == 0){
+              message2_msg[i].innerText = '차단이요.'
+            }
+            if(i == 1){
+              message2_msg[i].innerText = '남친있어요~'
+            }
+            if(i == 2){
+              message2_msg[i].innerText = '피닉스 많이 사랑해주세요...'
+            }
+            if(i == 3){
+              message2_msg[i].innerText = '경제 토론 좋아하세요? 아니죠?'
+            }
+            message2_msg[i].style.animation = 'none'
+          }, 3000);
+          setTimeout(() => {
+            notAllow[i].classList.add('active')
+          }, 4500);
+      })
+    }
   }
 
   window.addEventListener('load', () => {
@@ -169,31 +263,6 @@ $(function () {
     loading.addEventListener('transitionend', () => {
       document.querySelector('.wrap').removeChild(loading)
     })
-  })
-
-
-  $('#formMessage').keyup(function () {
-    if (window.event.keyCode == 13) {
-      let messageVal = $('.messageInput').val()
-      $('.message1_msg').text(messageVal)
-      setTimeout(() => {
-        $('.message2').addClass('active')
-      }, 1000);
-      setTimeout(() => {
-        $('.notAllow').addClass('active')
-      }, 2000);
-    }
-  })
-
-  $('.sendClick').click(function () {
-      let messageVal = $('.messageInput').val()
-      $('.message1_msg').text(messageVal)
-      setTimeout(() => {
-        $('.message2').addClass('active')
-      }, 1000);
-      setTimeout(() => {
-        $('.notAllow').addClass('active')
-      }, 2000);
   })
 
 

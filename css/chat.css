@@ -15,6 +15,7 @@ element {
 
 .swiper-container {
   flex: 1 1 0;
+  position: relative;
   margin: 0 15px;
   color: rgb(109, 109, 109);
 }
@@ -115,6 +116,26 @@ element {
 .swiper-slide-active+div+div .img {
   background-color: aliceblue;
   opacity: 1;
+}
+
+.upDown {
+  position: absolute;
+  top: 47%;
+  left: -22%;
+  width: 650px;
+  height: 60px;
+  transform: rotate(90deg);
+  z-index: 999;
+}
+
+.swiper-button-next {
+  width: 30px;
+  height: 30px;
+}
+
+.swiper-button-prev {
+  width: 30px;
+  height: 30px;
 }
 
 .picture {
@@ -472,11 +493,24 @@ element {
 }
 
 .messageSendBg .sendBox .message1 .message1_msg{
+  display: none;
   background: #27293b;
   color: #e6e6e6;
   margin: 4px 20px 4px 40px;
   border-radius: 25px;
   padding: 15px 20px;
+}
+
+@keyframes blinkMsg {
+  0%{
+    opacity: 1;
+  }
+  50%{
+    opacity: .5;
+  }
+  100%{
+    opacity: 1;
+  }
 }
 
 .messageSendBg .sendBox .message2{
@@ -507,11 +541,11 @@ element {
   flex: 1 1 0;
 }
 
-#formMessage {
+.formMessage {
   display: flex;
 }
 
-#formMessage .messageInput {
+.formMessage .messageInput {
   flex: 5 0 0;
   width: 380px;
   margin: 15px 0 18px 20px;
@@ -520,7 +554,7 @@ element {
   border-radius: 15px;
 }
 
-#formMessage .sendClick {
+.formMessage .sendClick {
   flex: 1 0 0;
   text-align: center;
   line-height: 28px;
