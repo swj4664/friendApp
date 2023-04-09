@@ -1,18 +1,15 @@
 @media (max-width: 1000px) {
   .chatWrap {
-      display: flex;
-      flex-direction: column;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 480px;
-      height: 700px;
-    }
-    
-    .detailSpace.active{
-      display: none;
-    }
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    width: 480px;
+    height: 700px;
+  }
+
+  .detailSpace.active {
+    display: none;
+  }
 }
 
 @media (max-width: 600px) {
@@ -22,18 +19,18 @@
     flex-direction: column;
     width: 350px;
     height: 510px;
-    background:rgb(54, 59, 77) ;
+    background: rgb(54, 59, 77);
     border-radius: 20px;
   }
 
-  .messageSendBg .sendBox .notAllow.active{
+  .messageSendBg .sendBox .notAllow.active {
     display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
     width: 350px;
     height: 510px;
-    background:rgba(0, 0, 0, 0.3) ;
+    background: rgba(0, 0, 0, 0.3);
     border-radius: 20px;
     color: aliceblue;
   }
@@ -51,7 +48,7 @@
     flex: 1 0 0;
     text-align: center;
     line-height: 28px;
-    margin: 10px ;
+    margin: 10px;
     color: aliceblue;
     font-weight: 600;
     background: transparent;
@@ -61,122 +58,122 @@
 }
 
 @media (max-width: 500px) {
-.chatWrap {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 380px;
-  height: 600px;
-}
+  .chatWrap {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 380px;
+    height: 600px;
+  }
 
-.detail.active {
-  display: flex;
-  flex: 1 1 0;
-  margin: 50px 15px;
-  border: 2px solid #acacac;
-  border-radius: 20px;
-}
+  .detail.active {
+    display: flex;
+    flex: 1 1 0;
+    margin: 50px 15px;
+    border: 2px solid #acacac;
+    border-radius: 20px;
+  }
 
-.cancelChat {
-  position: absolute;
-  top: 60px;
-  right: 30px;
-  padding: 10px;
-  font-size: 25px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: #00FF66;
-}
+  .cancelChat {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 10px;
+    font-size: 25px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #00FF66;
+  }
 
-.detailSpace.active{
-  display: none;
-}
+  .detailSpace.active {
+    display: none;
+  }
 
-.picture .img {
-  width: 90px;
-  height: 90px;
-  opacity: 0.5;
-  overflow: hidden;
-}
+  .picture .img {
+    width: 90px;
+    height: 90px;
+    opacity: 0.5;
+    overflow: hidden;
+  }
 
-.profile {
-  flex: 2 1 0;
-  padding-left: 10px;
-}
+  .profile {
+    flex: 2 1 0;
+    padding-left: 10px;
+  }
 
-.profile h2 {
-  font-size: 20px;
-  margin-top: 8px;
-  margin-bottom: 5px;
-}
+  .profile h2 {
+    font-size: 20px;
+    margin-top: 8px;
+    margin-bottom: 5px;
+  }
 
-.profile h2 span {
-  font-size: 14px;
-  margin-left: 12px;
-}
+  .profile h2 span {
+    font-size: 14px;
+    margin-left: 12px;
+  }
 
-.profile h3 {
-  font-size: 14px;
-  margin: 8px 0;
-  font-weight: 40;
-}
+  .profile h3 {
+    font-size: 14px;
+    margin: 8px 0;
+    font-weight: 40;
+  }
 
-.messageSend button {
-  width: 220px;
-  height: 55px;
-  font-size: 20px;
-  font-weight: 600;
-  color: #eeeeee;
-  background: none;
-  border: 3px solid #00FF66;
-  border-radius: 35px;
-}
+  .messageSend button {
+    width: 220px;
+    height: 55px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #eeeeee;
+    background: none;
+    border: 3px solid #00FF66;
+    border-radius: 35px;
+  }
 
-.imgName .imgNameImg img {
-  width: 100px;
-  height: 100px;
-}
+  .imgName .imgNameImg img {
+    width: 100px;
+    height: 100px;
+  }
 
-.imgName .imgNameName {
-  display: flex;
-  flex: 1 1 0;
-  align-items: end;
-  color: #e6e6e6;
-  font-size: 18px;
-}
+  .imgName .imgNameName {
+    display: flex;
+    flex: 1 1 0;
+    align-items: end;
+    color: #e6e6e6;
+    font-size: 18px;
+  }
 
-.imgName .imgNameName h4 {
-  flex: 1 1 0;
-  margin-bottom: 25px;
-}
+  .imgName .imgNameName h4 {
+    flex: 1 1 0;
+    margin-bottom: 25px;
+  }
 
-.imgName .imgNameName h4 span {
-  font-size: 14px;
-}
+  .imgName .imgNameName h4 span {
+    font-size: 14px;
+  }
 
-.messageSend .forShadow button {
-  width: 210px;
-  height: 60px;
-  font-size: 20px;
-  font-weight: 600;
-  color: #eeeeee;
-  background: none;
-  border: 3px solid #00FF66;
-  border-radius: 35px;
-}
+  .messageSend .forShadow button {
+    width: 210px;
+    height: 60px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #eeeeee;
+    background: none;
+    border: 3px solid #00FF66;
+    border-radius: 35px;
+  }
 
-.upDown {
-  position: absolute;
-  top: 47%;
-  left: -38%;
-  width: 600px;
-  height: 30px;
-  transform: rotate(90deg);
-  z-index: 999;
-}
+  .upDown {
+    position: absolute;
+    top: 47%;
+    left: -38%;
+    width: 600px;
+    height: 30px;
+    transform: rotate(90deg);
+    z-index: 999;
+  }
 
 }
