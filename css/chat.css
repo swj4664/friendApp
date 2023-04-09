@@ -15,7 +15,6 @@ element {
 .chatWrap {
   display: flex;
   justify-content: center;
-  align-self: center;
   width: 960px;
   height: 700px;
 }
