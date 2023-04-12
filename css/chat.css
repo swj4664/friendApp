@@ -56,19 +56,12 @@ element {
 
 .swiper-container .swiper-wrapper .swiper-slide {
   display: flex;
-  background-color: rgb(32, 28, 28);
+  background-color: rgb(32, 28, 28, .5);
   border-radius: 20px;
   
 }
 
 /* + : 다음 요소 선택 */
-.swiper-slide-active+div+div {
-  background-color: black !important;
-  transition: all 0.5s;
-  cursor: pointer;
-  color: rgb(230, 230, 230);
-
-}
 
 .swiper-slide-active+div {
   pointer-events: none;
@@ -113,7 +106,7 @@ element {
 }
 
 .swiper-slide-active+div+div {
-  background-color: black !important;
+  background-color: rgb(0, 0, 0, .5) !important;
   transition: all 0.5s;
   cursor: pointer;
   color: rgb(230, 230, 230);
@@ -559,6 +552,7 @@ element {
   padding: 20px;
   height: 50px;
   border-radius: 15px;
+  font-size: 17px;
 }
 
 .formMessage .sendClick {
