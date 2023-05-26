@@ -243,10 +243,10 @@ $(function () {
               message2_msg[i].innerText = '남친있어요~'
             }
             if(i == 2){
-              message2_msg[i].innerText = '피닉스 많이 사랑해주세요...'
+              message2_msg[i].innerText = '동물 많이 사랑해주세요...'
             }
             if(i == 3){
-              message2_msg[i].innerText = '경제 토론 좋아하세요? 아니죠?'
+              message2_msg[i].innerText = '책 같이 읽읍시다.'
             }
             message2_msg[i].style.animation = 'none'
           }, 3000);
